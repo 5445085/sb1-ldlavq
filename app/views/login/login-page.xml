@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-black">
+    <ActionBar title="SecureChat" class="bg-green-800 text-white" />
+    <StackLayout class="p-4">
+        <Label text="SECURE MESSENGER" class="text-2xl text-center text-green-500 font-bold mb-4" />
+        <TextField hint="Username" class="input mb-2 p-4 bg-gray-800 text-green-500 rounded" />
+        <TextField hint="Password" secure="true" class="input mb-4 p-4 bg-gray-800 text-green-500 rounded" />
+        <Button text="LOGIN" tap="{{ onLogin }}" class="btn p-4 bg-green-600 text-white rounded" />
+    </StackLayout>
+</Page>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="retro-bg">
+    <ActionBar title="SecureChat" class="retro-bg" />
+    
+    <GridLayout rows="*, auto">
+        <ListView items="{{ messages }}" row="0" class="p-2">
+            <ListView.itemTemplate>
+                <GridLayout columns="*" class="message-container p-2 m-2">
+                    <StackLayout>
+                        <Label text="{{ content }}" textWrap="true" class="text-base" />
+                        <Label text="{{ 'Expires in: ' + timeLeft }}" class="text-xs" />
+                    </StackLayout>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <GridLayout rows="auto" columns="*, auto" row="1" class="p-2">
+            <TextField 
+                text="{{ messageText }}" 
+                hint="Enter message..." 
+                col="0"
+                class="retro-input" />
+            <Button 
+                text="Send" 
+                tap="{{ sendMessage }}" 
+                col="1" 
+                class="retro-button ml-2" />
+        </GridLayout>
+    </GridLayout>
+</Page>
